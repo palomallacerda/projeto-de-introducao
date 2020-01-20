@@ -1,7 +1,4 @@
 
-cd Download
-python
-
 import pandas as pd
 import matplotlib.pyplot as plt 
 
@@ -41,5 +38,21 @@ import matplotlib.pyplot as plt
 fortaleza = pd.read_csv("fortaleza.csv") 
 
 
-fortaleza.boxplot()
+plt.boxplot(fortaleza.Fort)
+plt.show()
+
+# com malha#
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt 
+
+fortaleza = pd.read_csv("fortaleza.csv") 
+
+plt.plot(fortaleza.Ano, fortaleza.Fort)
+plt.xlabel('ANO (s)')
+plt.ylabel('Preciptacao')
+plt.title('Precipitação atmosférica em Fortaleza, CE')
+plt.grid(True)
+plt.tight_layout()
 plt.show()

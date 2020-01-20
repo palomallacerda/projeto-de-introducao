@@ -32,3 +32,14 @@ y = fort2["Fort"]
 
 graf = plt.plot(x,y)
 plt.show(graf)
+
+#gerando box#
+
+import pandas as pd
+import matplotlib.pyplot as plt 
+
+fortaleza = pd.read_csv("fortaleza.csv") 
+
+
+fortaleza.boxplot()
+plt.show()

@@ -1,4 +1,3 @@
-
 import pandas as pd
 import matplotlib.pyplot as plt 
 
@@ -48,11 +47,13 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 
 fortaleza = pd.read_csv("fortaleza.csv") 
+fort1 = fortaleza[0:29]
 
-plt.plot(fortaleza.Ano, fortaleza.Fort)
+plt.plot(fort1.Ano, fort1.Fort)
 plt.xlabel('ANO (s)')
 plt.ylabel('Preciptacao')
 plt.title('Precipitação atmosférica em Fortaleza, CE')
 plt.grid(True)
 plt.tight_layout()
+plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
 plt.show()

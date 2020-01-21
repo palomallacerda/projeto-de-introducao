@@ -44,7 +44,7 @@ fort1 = forta[139:]
 plt.plot(fort1.Ano, fort1.Fort)
 plt.xlabel('ANO (s)')
 plt.ylabel('Preciptacao')
-plt.title('Precipitação atmosférica os 10 primeiros')
+plt.title('Precipitação atmosférica os 10 ultimos')
 plt.grid(True)
 plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
 plt.show()

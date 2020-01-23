@@ -3,7 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
 
-
+plt.style.use('bmh') ## adiciona cores ##
+#print(plt.style.available)
 fort = pd.read_csv("fortaleza.csv") 
 
 plt.plot(fort.Ano, fort.Fort)

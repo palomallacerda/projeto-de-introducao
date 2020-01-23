@@ -2,8 +2,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-plt.style.use('bmh') ## adiciona cores ##
-#print(plt.style.available)
 fortaleza = pd.read_csv("fortaleza.csv") 
 
 x = fortaleza["Ano"]

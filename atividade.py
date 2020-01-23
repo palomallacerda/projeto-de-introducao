@@ -1,6 +1,9 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt 
 
+plt.style.use('bmh') ## adiciona cores ##
+#print(plt.style.available)
 fortaleza = pd.read_csv("fortaleza.csv") 
 
 x = fortaleza["Ano"]
@@ -23,7 +26,7 @@ plt.show(graf)
 
 fort2 = fortaleza[139:]
 
-x = fort2["Ano"]
+x = fort2["Ano"] ## vetor vertical ##
 y = fort2["Fort"]
 
 graf = plt.plot(x,y)
@@ -50,10 +53,11 @@ fortaleza = pd.read_csv("fortaleza.csv")
 fort1 = fortaleza[0:29]
 
 plt.plot(fort1.Ano, fort1.Fort)
-plt.xlabel('ANO (s)')
+plt.xlabel('ANO(s)')
 plt.ylabel('Preciptacao')
+
 plt.title('Precipitação atmosférica em Fortaleza, CE')
+
 plt.grid(True)
-plt.tight_layout()
 plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
 plt.show()

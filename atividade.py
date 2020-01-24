@@ -2,30 +2,30 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-fortaleza = pd.read_csv("fortaleza.csv") 
+mancha = pd.read_csv("MANCHAS.csv") 
 
-x = fortaleza["Ano"]
-y = fortaleza["Fort"]
+x = mancha["Ano"]
+y = mancha["manchas"]
 
-fort = plt.plot(x,y)
-plt.show(fort)
+graf = plt.plot(x,y)
+plt.show(graf)
 
 ##os 10 primeiros##
 
-fort1 = fortaleza[0:10]
-
-x = fort1["Ano"]
-y = fort1["Fort"]
+man1 = mancha[0:10]
+	
+x = man1["Ano"]
+y = man1["manchas"]
 
 graf = plt.plot(x,y)
 plt.show(graf)
 
 ##os 10 ultimos##
 
-fort2 = fortaleza[139:]
+man2 = mancha[167:]
 
-x = fort2["Ano"] ## vetor vertical ##
-y = fort2["Fort"]
+x = man2["Ano"] ## vetor vertical ##
+y = man2["manchas"]
 
 graf = plt.plot(x,y)
 plt.show(graf)
@@ -35,10 +35,10 @@ plt.show(graf)
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-fortaleza = pd.read_csv("fortaleza.csv") 
+mancha = pd.read_csv("MANCHAS.csv") 
 
 
-plt.boxplot(fortaleza.Fort)
+plt.boxplot(mancha.manchas)
 plt.show()
 
 # com malha#
@@ -47,15 +47,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-fortaleza = pd.read_csv("fortaleza.csv") 
-fort1 = fortaleza[0:29]
+mancha = pd.read_csv("MANCHAS.csv") 
+m1 = mancha[0:29]
 
-plt.plot(fort1.Ano, fort1.Fort)
+plt.plot(m1.Ano, m1.manchas)
 plt.xlabel('ANO(s)')
-plt.ylabel('Preciptacao')
+plt.ylabel('Quantidade')
 
-plt.title('Precipitação atmosférica em Fortaleza, CE')
+plt.title('Numero de manchas solares')
 
 plt.grid(True)
-plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
+plt.xticks(m1.Ano, m1.manchas, rotation = 'vertical')
 plt.show()

@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
 
-plt.style.use('seaborn-muted'	) ## adiciona cores ##
+plt.style.use('seaborn-muted') ## adiciona cores ##
 ##print(plt.style.available)
 
 solar = pd.read_csv("MANCHAS.csv") 
@@ -80,7 +80,6 @@ plt.show()
 
 import pandas as pd
 import matplotlib.pyplot as plt 
-
 
 solar1 = pd.read_csv("MANCHAS.csv") 
 

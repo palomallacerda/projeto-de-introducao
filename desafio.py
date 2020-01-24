@@ -3,22 +3,22 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
 
-plt.style.use('bmh') ## adiciona cores ##
-#print(plt.style.available)
+plt.style.use('seaborn-muted'	) ## adiciona cores ##
+##print(plt.style.available)
 
-fort = pd.read_csv("fortaleza.csv") 
+solar = pd.read_csv("MANCHAS.csv") 
 
-plt.plot(fort.Ano, fort.Fort)
+plt.plot(solar.Ano, solar.manchas)
 
 plt.xlabel('ANO (s)')
 
-plt.ylabel('Preciptacao')
+plt.ylabel('Mancha')
 
-plt.title('Precipitação atmosférica em Fortaleza, CE')
+plt.title('Manchas Solares')
 
 plt.grid(True)
 
-plt.xticks(fort.Ano, fort.Ano)
+plt.xticks(solar.Ano, solar.Ano)
 
 plt.savefig('grafico1.jpg')
 
@@ -31,21 +31,21 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-forta = pd.read_csv("fortaleza.csv") 
+solar = pd.read_csv("MANCHAS.csv") 
 
-fort1 = forta[0:10]
+solar1 = solar[0:10]
 
-plt.plot(fort1.Ano, fort1.Fort)
+plt.plot(solar1.Ano, solar1.manchas)
 
 plt.xlabel('ANO (s)')
 
-plt.ylabel('Preciptacao')
+plt.ylabel('Mancha')
 
-plt.title('Precipitação atmosférica os 10 primeiros')
+plt.title('Mancha solar 10 primeiros')
 
 plt.grid(True)
 
-plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
+plt.xticks(solar1.Ano, solar1.manchas, rotation = 'vertical')
 
 plt.savefig('10primeiros.jpg')
 
@@ -56,20 +56,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-forta = pd.read_csv("fortaleza.csv") 
-fort1 = forta[139:]
+solar = pd.read_csv("MANCHAS.csv") 
+solar1 = solar[139:]
 
-plt.plot(fort1.Ano, fort1.Fort)
+plt.plot(solar1.Ano, solar1.manchas)
 
 plt.xlabel('ANO (s)')
 
-plt.ylabel('Preciptacao')
+plt.ylabel('Quantidade')
 
-plt.title('Precipitação atmosférica os 10 ultimos')
+plt.title('MANCHAS SOlARES 10 ultimos')
 
 plt.grid(True)
 
-plt.xticks(fort1.Ano, fort1.Ano, rotation = 'vertical')
+plt.xticks(solar1.Ano, solar1.Ano, rotation = 'vertical')
 
 plt.savefig('10ultimos.jpg')
 
@@ -81,18 +81,19 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-fort1= pd.read_csv("fortaleza.csv") 
 
-plt.boxplot(fort1.Fort)
+solar1 = pd.read_csv("MANCHAS.csv") 
+
+plt.boxplot(solar1.manchas)
 
 plt.xlabel('ANO(s)')
 
-plt.ylabel('Preciptacao')
+plt.ylabel('Manchas')
 
-plt.title('Precipitação atmosférica')
+plt.title('Quantidade de Manchas Solares')
 
 plt.grid(True)
 
 plt.savefig('box.jpg')
 
-plt.show()  
+plt.show() 

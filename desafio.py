@@ -57,7 +57,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 solar = pd.read_csv("MANCHAS.csv") 
-solar1 = solar[139:]
+solar1 = solar[164:]
 
 plt.plot(solar1.Ano, solar1.manchas)
 

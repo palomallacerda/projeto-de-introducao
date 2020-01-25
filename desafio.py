@@ -2,8 +2,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
-
-plt.style.use('seaborn-muted') ## adiciona cores ##
+##classic
+plt.style.use('classic') ## adiciona cores ##
 ##print(plt.style.available)
 
 solar = pd.read_csv("MANCHAS.csv") 
